@@ -1,0 +1,60 @@
+input_fasta: inputs/all_tads_rggs_dis.fasta
+
+pairing:
+  mode: explicit_pairs
+  pairs_file: inputs/pairs_list_example.txt
+  list_a: inputs/idra_list_example.txt
+  list_b: inputs/idrb_list_example.txt
+  allow_self_pairs: false
+  keep_order: true
+
+resources:
+  residues_file: resources/residues.csv
+
+paths:
+  runs_dir: run
+  rdfs_dir: rdfs
+  combined_trajs_dir: combined_trajs
+
+naming:
+  pair_dir_prefix: test_
+  temp_dir_name: 298k_20.0nm
+  job_dir_glob: "job_*"
+  rdf_prefix: rdfs_
+  rdf_box_label: 20nm
+
+outputs:
+  prepared_pairs_csv: results/prepared/pairs.csv
+  rdf_summary_csv: rdfs/rdf_summary.csv
+  b22_csv: results/b22/b22_summary.csv
+  features_csv: results/features/pair_features.csv
+  features_with_b22_csv: results/analysis/pair_features_b22.csv
+
+calvados:
+  replicates: 10
+  box: 20.0
+  temp: 298.0
+  ionic: 0.15
+  ph: 7.0
+  steps: 100000000
+  wfreq: 10000
+  platform: CPU
+  threads: 1
+  restart_mode: checkpoint
+  restart_file: restart.chk
+  topol: grid
+  runtime: 0
+  charge_termini: both
+  write_job_script: true
+  job_script_name: run_calvados.sh
+
+rdf:
+  box_size: 20.0
+  bin_width: 0.1
+  pdb_pattern: "*.pdb"
+  dcd_pattern: "*.dcd"
+  min_replicates: 1
+
+b22:
+  apply_finite_size_correction: true
+  integration_boundary: 7.5

@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.DS_Store
+run/
+rdfs/
+combined_trajs/
+test_energies/
+results/
+sims_supplementary/
+CALVADOS/
+
+.snakemake/
+combined_trajs_old/
+rdfs_old/
+.DS_Store
