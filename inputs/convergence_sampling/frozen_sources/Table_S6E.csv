@@ -1,0 +1,31 @@
+stage_number,stage,cumulative_pair_count,attractive_pair_count,B22_median,B22_p05,B22_p25,B22_p75,B22_p95,log10_negB22_median,KS_log10_vs_final917,Wasserstein_log10_vs_final917,B22_source_file,heldout_B22_used,metric_interpretation,record_type,feature,dataset,comparison,n,mean,median,SD,IQR,p05,p25,p75,p95,standardized_mean_difference,KS_statistic,Wasserstein_distance
+1.0,Initial + outside-filter,498.0,498.0,-853.0740062058442,-5886.437092374329,-1510.3571735597397,-610.2849375668603,-423.3105200898296,2.9309836973440078,0.032465740825899016,0.024736777760418938,/Users/yuktikhanna/rtads-rgg-interactions/fig4/sim_pairs_added_features_data_270525.csv,0.0,retrospective support; not a prospective stopping threshold,pairwise_distance,minus_NCP,,Full landscape vs 917 panel,,,,,,,,,,0.2155853938817549,0.09319641342542107,3.8118429266827842
+2.0,+ low-λ,678.0,678.0,-818.7310284093626,-4595.416621829178,-1353.7553983415128,-584.7620301383902,-412.7124741797263,2.9131397885124204,0.02413442577598492,0.013410456930337851,/Users/yuktikhanna/rtads-rgg-interactions/fig4/sim_pairs_added_features_data_270525.csv,0.0,retrospective support; not a prospective stopping threshold,pairwise_distance,minus_NCP,,"Full landscape vs Held-out 1,794",,,,,,,,,,-0.044163431300719674,0.06708107713542494,1.1147528799702673
+3.0,+ −NCP sampling,843.0,843.0,-811.118208143766,-4591.459366150963,-1353.2973363606866,-573.7191615434051,-389.70066482353167,2.909084150639723,0.0307568519244377,0.015959976779899916,/Users/yuktikhanna/rtads-rgg-interactions/fig4/sim_pairs_added_features_data_270525.csv,0.0,retrospective support; not a prospective stopping threshold,pairwise_distance,minus_NCP,,"917 panel vs Held-out 1,794",,,,,,,,,,-0.22441332896247043,0.12261154046749799,4.619229979004288
+4.0,Final training set,917.0,917.0,-847.0262061605852,-4488.175635283181,-1454.2089867977145,-586.909001014307,-403.31599558071497,2.9278968471841553,0.0,0.0,/Users/yuktikhanna/rtads-rgg-interactions/fig4/sim_pairs_added_features_data_270525.csv,0.0,retrospective support; not a prospective stopping threshold,pairwise_distance,normalized_minus_NCP,,Full landscape vs 917 panel,,,,,,,,,,0.16833424813025788,0.07582611593149258,0.062070209316498884
+,,,,,,,,,,,,,,,pairwise_distance,normalized_minus_NCP,,"Full landscape vs Held-out 1,794",,,,,,,,,,-0.018679987131900635,0.0778288740245262,0.035572043597508055
+,,,,,,,,,,,,,,,pairwise_distance,normalized_minus_NCP,,"917 panel vs Held-out 1,794",,,,,,,,,,-0.1604219110684296,0.10155504413718817,0.07109310074796274
+,,,,,,,,,,,,,,,pairwise_distance,Charge_Complementarity,,Full landscape vs 917 panel,,,,,,,,,,-0.01818038730512598,0.059056818600877636,0.36153556150859484
+,,,,,,,,,,,,,,,pairwise_distance,Charge_Complementarity,,"Full landscape vs Held-out 1,794",,,,,,,,,,0.15455825544403576,0.08548767054201845,0.3628623188405799
+,,,,,,,,,,,,,,,pairwise_distance,Charge_Complementarity,,"917 panel vs Held-out 1,794",,,,,,,,,,0.1627831257123309,0.13176601029239596,0.5749563247903772
+,,,,,,,,,,,,,,,pairwise_distance,charge_AHD,,Full landscape vs 917 panel,,,,,,,,,,-0.12016017968134539,0.07944146792470724,0.28550092456498044
+,,,,,,,,,,,,,,,pairwise_distance,charge_AHD,,"Full landscape vs Held-out 1,794",,,,,,,,,,0.2307223021112559,0.10869565217391303,0.5347826086956523
+,,,,,,,,,,,,,,,pairwise_distance,charge_AHD,,"917 panel vs Held-out 1,794",,,,,,,,,,0.36789406180516804,0.18813712009862027,0.7975913896922859
+,,,,,,,,,,,,,,,pairwise_distance,charge_RG_RGG,,Full landscape vs 917 panel,,,,,,,,,,0.18639468849212842,0.08317430025445294,0.6765570095722769
+,,,,,,,,,,,,,,,pairwise_distance,charge_RG_RGG,,"Full landscape vs Held-out 1,794",,,,,,,,,,0.11297193340964341,0.07211538461538458,0.5651709401709403
+,,,,,,,,,,,,,,,pairwise_distance,charge_RG_RGG,,"917 panel vs Held-out 1,794",,,,,,,,,,-0.06322630172151557,0.05570002516567402,0.3711237871543215
+,,,,,,,,,,,,,,,pairwise_distance,mean_NCPR,,Full landscape vs 917 panel,,,,,,,,,,-0.04623225300785277,0.06765547047450465,0.009242187046552799
+,,,,,,,,,,,,,,,pairwise_distance,mean_NCPR,,"Full landscape vs Held-out 1,794",,,,,,,,,,0.2611900036899011,0.11570512820512824,0.02274024670578126
+,,,,,,,,,,,,,,,pairwise_distance,mean_NCPR,,"917 panel vs Held-out 1,794",,,,,,,,,,0.26693369477667883,0.17561871693965952,0.02494325737062615
+,,,,,,,,,,,,,,,pairwise_distance,mean_lambda,,Full landscape vs 917 panel,,,,,,,,,,-0.07157131102818118,0.09229733324904243,0.006660210802906955
+,,,,,,,,,,,,,,,pairwise_distance,mean_lambda,,"Full landscape vs Held-out 1,794",,,,,,,,,,0.3043680708469129,0.15382027392896958,0.014044137461094845
+,,,,,,,,,,,,,,,pairwise_distance,mean_lambda,,"917 panel vs Held-out 1,794",,,,,,,,,,0.4054837535147203,0.218301888398138,0.017346574694434465
+,,,,,,,,,,,,,,,pairwise_distance,AHD_length,,Full landscape vs 917 panel,,,,,,,,,,0.018812427276757016,0.00662841970508754,0.12290550471765252
+,,,,,,,,,,,,,,,pairwise_distance,AHD_length,,"Full landscape vs Held-out 1,794",,,,,,,,,,0.04760057593787959,0.14347826086956522,0.7304347826086951
+,,,,,,,,,,,,,,,pairwise_distance,AHD_length,,"917 panel vs Held-out 1,794",,,,,,,,,,0.030686709022282196,0.13868474704850411,0.776255274761747
+,,,,,,,,,,,,,,,pairwise_distance,RG_RGG_length,,Full landscape vs 917 panel,,,,,,,,,,0.1735837112783287,0.11572307039864294,2.229454440809401
+,,,,,,,,,,,,,,,pairwise_distance,RG_RGG_length,,"Full landscape vs Held-out 1,794",,,,,,,,,,-0.038217630861263674,0.07417582417582416,1.124618437118436
+,,,,,,,,,,,,,,,pairwise_distance,RG_RGG_length,,"917 panel vs Held-out 1,794",,,,,,,,,,-0.20649727754090638,0.11595783351508543,2.6117355926516215
+,,,,,,,,,,,,,,,pairwise_distance,total_length,,Full landscape vs 917 panel,,,,,,,,,,0.16468308922501146,0.1054307326979913,2.2103966146697633
+,,,,,,,,,,,,,,,pairwise_distance,total_length,,"Full landscape vs Held-out 1,794",,,,,,,,,,-0.01392147472663805,0.028170289855072528,0.8441511387163565
+,,,,,,,,,,,,,,,pairwise_distance,total_length,,"917 panel vs Held-out 1,794",,,,,,,,,,-0.17664618774628738,0.08273184940957924,2.273669410576147

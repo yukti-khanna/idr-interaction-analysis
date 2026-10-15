@@ -1,0 +1,5 @@
+{
+  "frozen_sources": "inputs/convergence_sampling/frozen_sources",
+  "convergence_results": "results/b22_convergence/verified",
+  "sampling_results": "results/sampling/verified"
+}

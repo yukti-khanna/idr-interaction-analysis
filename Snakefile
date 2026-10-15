@@ -1,8 +1,12 @@
 configfile: "config/config.yaml"
 
+include: "workflow/convergence.smk"
+
 
 rule all:
+    default_target: True
     input:
+        ([CONVERGENCE_REPORT] if CONVERGENCE_WITH_MAIN else []),
         config["outputs"]["prepared_pairs_csv"],
         "results/prepared/calvados_inputs.done",
         config["outputs"]["rdf_summary_csv"],
@@ -160,10 +164,15 @@ rule compute_b22:
     output:
         config["outputs"]["b22_csv"]
     params:
+        reuse_existing=lambda wildcards: str(convergence_flag(config.get("reuse_existing_b22", True))),
         finite_size="--apply-finite-size-correction" if config["b22"]["apply_finite_size_correction"] else "",
         integration_boundary=config["b22"]["integration_boundary"]
     shell:
         """
+        if [ "{params.reuse_existing}" = "True" ]; then
+          echo "B22 recalculation disabled. Restore the established B22 output, or explicitly set reuse_existing_b22=false for a new analysis." >&2
+          exit 1
+        fi
         python scripts/compute_b22.py \
           --rdf-summary-csv {input} \
           --output-csv {output} \
