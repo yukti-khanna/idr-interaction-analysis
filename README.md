@@ -145,3 +145,29 @@ snakemake --cores 1 feature_tables
 - Pair order is preserved.
 - Pair IDs use the `a__b` convention.
 - The final feature table follows the legacy column naming style, with `a`/`b` replacing the earlier `rgg`/`tad` labels.
+
+<!-- BEGIN EXISTING B22 CONVERGENCE -->
+
+## Existing-B22 convergence and sampling summaries
+
+Run only convergence verification/export (no RDF extraction or B22 recalculation):
+
+```bash
+snakemake --cores 1 b22_convergence --config include_b22_convergence=false
+```
+
+Or include it after the main workflow:
+
+```bash
+snakemake --cores 1 --config include_b22_convergence=true
+```
+
+Frozen established tables are under inputs/convergence_sampling/frozen_sources;
+outputs are under results/b22_convergence/verified and results/sampling/verified.
+This target verifies established all-combination and trajectory-convergence
+summaries; it does not recompute convergence from trajectories or replica values.
+The main B22-producing rule is guarded against recalculation by default. If it
+is scheduled, restore established outputs instead of enabling recalculation.
+No simulations or analysis are run by installation. Figure plotting stays in
+rtads-rgg-interactions/fig4 (current manuscript Figure 3, S4, S5).
+<!-- END EXISTING B22 CONVERGENCE -->
